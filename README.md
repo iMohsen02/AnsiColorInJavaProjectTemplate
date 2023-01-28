@@ -36,4 +36,18 @@ System.out.println("\u001b[38;5;32m This text will be BLUE\u001b[0m");
 // change the color to blue and then after print the text reset the color format
 ```
 
+
+# Creative Process & Process Line
+Some creative functions that show the process are built based on Ansi colors in the AnsiColor.java to bring beauty to your command line programs.
+
+For example, process line functions have been tested in Main.java, which can be used in three different modes (process using percentage, process using percentage and text, process line using text).
+
+In every type of showing process you are able to set the sleep time per percentage
+
+pat attention that After the process, the printed line will be deleted
+
+
+https://user-images.githubusercontent.com/85742391/215284639-21b8aeb3-34f6-446f-9fa4-27ddbca7d403.mp4
+
+
 Enjoy it :)
