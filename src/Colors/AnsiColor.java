@@ -3,8 +3,8 @@ package Colors;
 import java.util.Random;
 
 /** @author <span style="font-family: Times New Roman; color: #FFA400">iMohsen02 - Mohsen Gholami<br> Computer engineering student of Yazd State University located in Yazd province in Iran - programmer - graphic designer - typist - teacher - computer lover :)</span><hr>
- * <span style="color: white">Telegram:</span>&nbsp;&nbsp;                                   <a href="http://T.me/iMohsen02">Mohsen.Telegram(uswrname: @iMohsen02)</a><br><hr>
- * <span style="color: white">Instagram:</span>&nbsp;                                        <a href="https://www.instagram.com/imohsen02?r=nametag">Mohsen.Instagram(uswrname: @iMohsen02)</a><hr>
+ * <span style="color: white">Telegram:</span>&nbsp;&nbsp;                                   <a href="http://T.me/iMohsen02">Mohsen.Telegram(username: @iMohsen02)</a><br><hr>
+ * <span style="color: white">Instagram:</span>&nbsp;                                        <a href="https://www.instagram.com/imohsen02?r=nametag">Mohsen.Instagram(username: @iMohsen02)</a><hr>
  * <span style="color: white">WhatsApp:</span>&nbsp;                                         <a href="https://wa.me/qr/DG3BZ5DH2CZBP1">Mohsen.WhatsApp(Personal Number)</a><hr>
  * <span style="color: white">E-mail:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       <a href="mailto:imohsen2002@gmail.com">Mohsen.Email(iMohsen2002@gmail.com)</a><hr>
  * <span style="color: white">Twitter:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   <a href="https://twitter.com/iMohsen02?s=09">Mohsen.Twitter(username: @iMohsen02)</a><hr>
@@ -66,7 +66,7 @@ public class AnsiColor {
 
     //Reset Style
     public static final String RESET_COLOR = "\u001b[0m";
-    
+
     private static void process(long millisecondSleep, int percent, String processText) {
         for (int i = 0; i <= percent; i++) {
             System.out.print(processText);
@@ -205,16 +205,12 @@ public class AnsiColor {
             System.out.print(foreColor(randNum) + processText + ": " + AnsiColor.RESET_COLOR);
 
             if (i < 49) {
-                for (int j = 0; j < i; j++)
-                    System.out.print(backColor(randNum) + " " + AnsiColor.RESET_COLOR);
-                for (int j = 0; j < 49 - i; j++)
-                    System.out.print(" ");
-
+                System.out.print(backColor(randNum) + "_".repeat(i) + AnsiColor.RESET_COLOR);
+                System.out.print( " ".repeat(49 - i));
                 System.out.print(i + "%");
             }
             if (i >= 49) {
-                for (int j = 0; j < 49; j++)
-                    System.out.print(backColor(randNum) + " " + AnsiColor.RESET_COLOR);
+                System.out.print(backColor(randNum) + "_".repeat(49) + AnsiColor.RESET_COLOR);
 
                 if (i == 49)
                     System.out.print(backColor(randNum) + foreColor(randNum) + "4" + AnsiColor.RESET_COLOR + "9%");
@@ -222,8 +218,7 @@ public class AnsiColor {
                     System.out.print(backColor(randNum) + foreColor(randNum) + "50" + AnsiColor.RESET_COLOR + "%");
                 if (i >= 51)
                     System.out.print(backColor(randNum) + foreColor(randNum) + i + "%" + AnsiColor.RESET_COLOR);
-                for (int j = 52; j < i; j++)
-                    System.out.print(backColor(randNum) + " " + AnsiColor.RESET_COLOR);
+                System.out.print(backColor(randNum) + "_".repeat(Math.max(0, i - 52)) + AnsiColor.RESET_COLOR + "");
 
             }
 
@@ -232,9 +227,9 @@ public class AnsiColor {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.print("\r");
+            System.out.print("\r" + " ".repeat(130) + "\r");
         }
-        System.out.print("\r" + "");
+        System.out.print("\r" + " ".repeat(130) + "\r");
     }
 
     /**

@@ -11,6 +11,7 @@ public class Main {
         AnsiColor.showProcess(30, "this is another process :)");
         AnsiColor.showProcess(30, 120, "this is another another process :)");
 
+        AnsiColor.setSleepTime(3000);
         AnsiColor.processLine();
         AnsiColor.processLine("this is process line :)");
         AnsiColor.processLine(100, "another process line");
