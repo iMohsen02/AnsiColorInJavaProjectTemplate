@@ -46,7 +46,7 @@ you can easily generate too many color by using RGB coloring model: <br>
 ```
 for example in java:
 ```java
-System.out.println("\033[38;2;255;215;0m This text will be GOLD\033[0m")
+System.out.println("\033[38;2;255;215;0m This text will be GOLD\033[0m");
 ```
 
 # Creative Process & Process Line
