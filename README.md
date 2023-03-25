@@ -35,7 +35,19 @@ for example in java:
 System.out.println("\u001b[38;5;32m This text will be BLUE\u001b[0m");
 // change the color to blue and then after print the text reset the color format
 ```
+and you can use RGB coloring model:
 
+![colorcube](https://user-images.githubusercontent.com/119660029/227197745-c0b4741b-96fb-4f76-b33b-7684aed577af.jpg)
+<br>
+you can easily generate too many color by using RGB coloring model: <br>
+```text
+\033[38;2;R;G;Bm // select the foreground color
+\033[38;2;R;G;Bm // select the background color
+```
+for example in java:
+```java
+System.out.println("\033[38;2;255;215;0m This text will be GOLD\033[0m");
+```
 
 # Creative Process & Process Line
 Some creative functions that show the process are built based on Ansi colors in the AnsiColor.java to bring beauty to your command line programs.
